@@ -2,15 +2,6 @@
 
 A new Flutter project.
 
-## Getting Started
+## Home Screen
+![Screenshot_20240415-125710_(1)](https://github.com/ConfusedStudent20/phone_number_authentication-flutter/assets/113964172/268eaf3c-985d-41c7-860c-36ece997d294)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
