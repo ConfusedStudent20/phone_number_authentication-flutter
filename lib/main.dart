@@ -16,6 +16,7 @@ void main() async {
       storageBucket: "otpcode-b00e1.appspot.com",
     ),
   );
+  //   await PhoneAuthentication().signOut(); // Sign out the user
 
   runApp(const MyApp());
 }
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         //       verification: '',
         //     ),
         '/phoneScreen': (_) => const PhoneScreen(),
-        '/dashScreen': (_) => const DashScreen(),
+        '/dashScreen': (_) => DashScreen(),
       },
     );
   }

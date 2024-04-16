@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:otp_verification/controllers/phone_Authentication.dart';
 import 'package:otp_verification/widgets/colors.dart';
 import 'package:otp_verification/widgets/common_Button.dart';
 import 'package:otp_verification/widgets/text_FormField.dart';
@@ -13,6 +14,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+
+// loginUser
+
+  signGoogle() async {
+    await PhoneAuthentication().signWithGoogle();
+    Navigator.of(context).pushNamed('/dashScreen');
+  }
+
   @override
   void dispose() {
     emailController.dispose();
@@ -50,7 +59,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       _textFormField(),
                       const SizedBox(height: 30),
-                      CommonButton(onPressed: () {}, title: 'Continue',color: ColorTheme.commonColor,),
+                      CommonButton(
+                        onPressed: () {},
+                        title: 'Continue',
+                        color: ColorTheme.commonColor,
+                      ),
                       const SizedBox(height: 10),
                       _socialButton(),
                     ],
@@ -82,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             children: [
               CommonButton(
-                onPressed: () {},
+                onPressed: signGoogle,
                 color: ColorTheme.googleColor,
                 title: 'Continue with Google',
                 imgPath: 'assets/images/google.jpg',
